@@ -1,0 +1,36 @@
+<header>
+  <ng-container *ngIf="isMobile ; else Desktop">
+
+    <section class="section-container">
+      <app-logo (navItemSelected)="onNavItemClick($event)"></app-logo>
+      <span class="fi hamburger" (click)="onMenuToggle()">{{hasMenu ? 'close' : 'hamburger'}}</span>
+    </section>
+
+    <section class="mobile-menu" *ngIf="hasMenu">
+
+      <app-menu (navItemSelected)="onNavItemClick($event)"></app-menu>
+
+      <app-nav-item [navItem]="navItemLogin">
+      </app-nav-item>
+
+      <app-spacer></app-spacer>
+      <button class="btn-sign-up disabled">SIGN UP</button>
+      <app-spacer></app-spacer>
+
+    </section>
+
+  </ng-container>
+</header>
+
+<ng-template #Desktop>
+  <article class="main-nav">
+    <app-logo></app-logo>
+    <app-menu></app-menu>
+  </article>
+
+  <section>
+    <app-nav-item [navItem]="navItemLogin">
+    </app-nav-item>
+    <button class="btn-sign-up disabled">SIGN UP</button>
+  </section>
+</ng-template>

@@ -1,0 +1,61 @@
+@import './../../../../../../assets/less/_variables.less';
+
+h5 {
+    align-self: flex-end;
+}
+
+.mv-overview-grid {
+    width       : 70%;
+    margin-right: 50px;
+}
+
+.text-title {
+    color    : white;
+    font-size: 24px;
+}
+
+.text-sub {
+    font-size: 12px;
+}
+
+.title-grid {
+    display: flex;
+}
+
+@media (max-width:320px) {
+
+    /* smartphones, iPhone, portrait 480x320 phones */
+}
+
+@media (max-width:481px) {
+
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+
+
+@media (max-width:641px) {
+
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+
+@media (max-width:961px) {
+
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .flex,
+    .section-container {
+        flex-direction: column;
+    }
+
+    .mv-overview-grid {
+        width       : @fill;
+        margin-right: 0px;
+    }
+}
+
+@media (max-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}
+
+@media (max-width:1281px) {
+    /* hi-res laptops and desktops */
+}

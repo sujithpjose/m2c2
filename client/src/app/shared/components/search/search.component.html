@@ -1,0 +1,18 @@
+<section class="search-grid">
+    <article class="btn-grid">
+        <button class="input-fill">
+            {{searchKey}}
+        </button>
+    </article>
+
+    <article class="input-grid">
+        <input class="input-fill" [(ngModel)]="searchText" placeholder="Search for a movie, tv show" />
+    </article>
+    <article class="btn-grid">
+        <button class="clickable input-fill" [class.active]="searchText?.length > 0"
+            (click)="onContentSearch()">
+            Search
+            <span class="fi">ei_search</span>
+        </button>
+    </article>
+</section>

@@ -1,0 +1,3 @@
+<article *ngFor="let item of dots; let i = index">
+    <span (click)="onSelect(item)" class="circle" [class.active]="i === activeIndex"></span>
+</article>

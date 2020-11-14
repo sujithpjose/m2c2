@@ -1,0 +1,92 @@
+@import "assets/less/_variables.less";
+@import "assets/less/_reset.less";
+@import "assets/less/_star-rating.less";
+
+
+@font-face {
+    font-family: 'mc-icons';
+    src        : url(assets/fonts/icomoon.ttf) format("truetype");
+}
+
+
+body {
+    font-family: 'B612';
+    color      : @primary_color;
+}
+
+.container {
+    background: @theme_dark;
+    overflow  : auto;
+    min-height: 100vh;
+}
+
+.section-container {
+    display        : flex;
+    justify-content: space-between;
+}
+
+span.fi {
+    font-family: 'mc-icons';
+}
+
+.btn-sign-up {
+    background   : @tertiary_color;
+    height       : 50px;
+    border-radius: 25px;
+    color        : white;
+    width        : 150px;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-primary-alternate {
+    color: @primary_alternate_color;
+}
+
+.flex {
+    display: flex;
+}
+
+.ml-5 {
+    margin-left: 5px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.line-border {
+    display: flex;
+    width  : 100%;
+    border : 1px solid @primary_alternate_color ;
+}
+
+.input-fill {
+    width : @fill;
+    height: @fill;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.disabled,
+input.disabled,
+input:disabled,
+button.disabled,
+button:disabled {
+    pointer-events: none;
+    opacity       : .3;
+}
+
+// pagination style overrides
+.my-pagination .ngx-pagination {
+    display: inline-block;
+    width  : @fill;
+}
+
+.my-pagination .ngx-pagination a {
+    color: @primary_alternate_color;
+}

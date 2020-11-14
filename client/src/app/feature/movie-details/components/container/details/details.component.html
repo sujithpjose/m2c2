@@ -1,0 +1,26 @@
+<m2c-search></m2c-search>
+
+<section class="section-container" *ngIf="movie">
+    <article class="image-section">
+        <img class="img-poster-full"
+            [src]="movie?.poster_path ? 'https://image.tmdb.org/t/p/original'+ movie.poster_path : ''">
+        <button [disabled]="!safeSrc" class="btn-sign-up btn-action" (click)="showTrailer()">WATCH
+            TRAILER</button>
+        <!-- <button class="btn-sign-up btn-action secondary">BUY TICKET</button> -->
+    </article>
+    <article class="details-section">
+        <mv-details [movie]="movie" [metaTags]="metaTags"></mv-details>
+    </article>
+</section>
+
+<app-spacer></app-spacer>
+<span class="line-border"></span>
+<app-spacer></app-spacer>
+
+<mv-recommendation *ngIf="recommendations.length > 0" [recommendations]="recommendations"
+    (movieSelected)="onMovieSelected($event)"></mv-recommendation>
+
+<mv-overlay (closeOverlay)="onCloseOverlay($event)" *ngIf="showOverlay">
+    <iframe [class.thumbnail]="thumbnail" [src]="safeSrc" width="100%" height="100%" frameborder="0"
+        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</mv-overlay>

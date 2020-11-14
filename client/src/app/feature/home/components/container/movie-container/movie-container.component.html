@@ -1,0 +1,28 @@
+<m2c-search></m2c-search>
+
+
+
+<app-slider-carousal class="movie-card-slider" [animate]="dotActive">
+    <article *ngFor="let movie of trendingMovies">
+        <movie-card (movieSelected)="onMovieSelected($event)" [movie]="movie"></movie-card>
+    </article>
+</app-slider-carousal>
+
+<app-spacer></app-spacer>
+<section class="slider-dots">
+    <slider-dots (activeItem)="activeItemChanged($event)" [count]="count" [activeIndex]="dotActive"></slider-dots>
+</section>
+
+<ng-container *ngFor="let aMovies of movies ; let i = index">
+    <app-spacer [height]="20"></app-spacer>
+    <section class="section-container">
+        <h3 class="text-white">{{languages[i].name}}</h3>
+        <p class="text-primary-alternate clickable" (click)="onViewAll(languages[i].name)">View All</p>
+    </section>
+
+    <section class="movie-card-slider">
+        <article *ngFor="let movie of aMovies.results ; let in = index">
+            <movie-card *ngIf="in <= 5" (movieSelected)="onMovieSelected($event)" [movie]="movie"></movie-card>
+        </article>
+    </section>
+</ng-container>

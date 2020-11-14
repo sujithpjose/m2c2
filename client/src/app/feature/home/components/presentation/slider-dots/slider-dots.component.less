@@ -1,0 +1,23 @@
+@import './../../../../../../assets/less/_variables.less';
+
+@dot_size  : 10px;
+@dot_color : white;
+
+:host {
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.circle {
+    width        : @dot_size;
+    height       : @dot_size;
+    border-radius: 50%;
+    background   : @dot_color;
+    margin-left  : 10px;
+    display      : flex;
+    cursor       : pointer;
+}
+
+.circle.active {
+    background: @secondary_color;
+}

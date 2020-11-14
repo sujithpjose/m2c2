@@ -1,0 +1,82 @@
+@import './../../../../../../assets/less/_variables.less';
+@import './../movie-card/movie-card.component.less';
+@footer_padding : 15px;
+
+.slider-footer {
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-around;
+    font-size      : @font_smaller;
+    padding        : @footer_padding ;
+    height         : @card_footer_height;
+}
+
+.rating-grid {
+    display        : flex;
+    justify-content: space-between;
+    font-size      : @font_small;
+    align-items    : center;
+    margin-bottom  : 10px;
+}
+
+.movie-title {
+    color    : white;
+    font-size: @font_regular;
+}
+
+.fi {
+    font-size   : @font_large;
+    margin-right: 5px;
+}
+
+.mc-rating {
+    color: @secondary_color;
+}
+
+.user-rating {
+    color: @tertiary_color;
+}
+
+.gauge {
+    display        : flex;
+    justify-content: flex-end;
+    margin-top     : -50px;
+    color          : white;
+}
+
+ngx-gauge {
+    border-radius: 50%;
+    background   : rgba(35, 58, 80, .9);
+}
+
+
+@media (max-width:320px) {
+
+    /* smartphones, iPhone, portrait 480x320 phones */
+}
+
+@media (max-width:481px) {
+
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+
+
+@media (max-width:641px) {
+
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    .dynamicFooter {
+        display: none;
+    }
+}
+
+@media (max-width:961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media (max-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}
+
+@media (max-width:1281px) {
+    /* hi-res laptops and desktops */
+}

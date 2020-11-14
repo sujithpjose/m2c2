@@ -1,0 +1,75 @@
+@import './../../../../assets/less/_variables.less';
+
+@header_height         : 90px;
+@header_bg             : #000000;
+@header_padding        : 0 40px;
+@header_padding_mobile : 0 15px;
+
+header {
+    height         : @header_height;
+    background     : @header_bg;
+    padding        : @header_padding;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.main-nav {
+    display    : flex;
+    align-items: center;
+}
+
+.section-container {
+    align-items: center;
+    width      : @fill;
+}
+
+.fi.hamburger {
+    border   : 1px solid #FFFFFF;
+    font-size: 21px;
+}
+
+.mobile-menu {
+    width     : @fill;
+    border-top: 1px solid @theme_dark_bg;
+}
+
+@media (max-width:320px) {
+
+    /* smartphones, iPhone, portrait 480x320 phones */
+}
+
+@media (max-width:481px) {
+
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+
+
+@media (max-width:641px) {
+
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+
+@media (max-width:961px) {
+
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    header {
+        height        : auto;
+        flex-direction: column;
+        align-items   : flex-start;
+        padding       : @header_padding_mobile;
+    }
+
+    // .btn-sign-up {
+    //     width : 85%;
+    //     margin: 0 auto;
+    // }
+}
+
+@media (max-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}
+
+@media (max-width:1281px) {
+    /* hi-res laptops and desktops */
+}

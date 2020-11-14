@@ -1,0 +1,18 @@
+<article class="title-grid">
+    <h2 class="text-title">{{movie?.title}}</h2>
+    <h5 class="text-sub ml-10">{{movie?.release_date | date : 'yyyy'}}</h5>
+</article>
+
+<mv-rating-grid [movie]="movie"></mv-rating-grid>
+<app-spacer [height]="50"></app-spacer>
+
+<article class="flex">
+    <div class="mv-overview-grid">
+        <mv-tab [text]="movie?.overview"></mv-tab>
+        <mv-cast [data]="movie?.credits?.cast"></mv-cast>
+    </div>
+    <div class="mv-meta-tag-grid">
+        <mv-meta-tags [metaTags]="metaTags"></mv-meta-tags>
+    </div>
+
+</article>

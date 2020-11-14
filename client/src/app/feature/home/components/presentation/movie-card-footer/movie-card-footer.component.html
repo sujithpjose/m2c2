@@ -1,0 +1,9 @@
+<section class="slider-footer" [class.dynamicFooter]="dynamicFooter">
+
+  <m2c-rating-grid [rating]="movie.vote_average" [votes]="movie.vote_count"></m2c-rating-grid>
+
+  <article>
+    <span class="movie-title">{{movie.title}}</span> <br />
+    <small>{{movie.release_date | date : 'mediumDate'}}</small>
+  </article>
+</section>

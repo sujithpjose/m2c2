@@ -1,0 +1,7 @@
+<section class="mv-card">
+  <article (click)="onMovieSelect(movie)">
+    <m2c-poster-img [imageUrl]="movie.poster_path ? 'https://image.tmdb.org/t/p/original'+ movie.poster_path : ''">
+    </m2c-poster-img>
+  </article>
+  <movie-card-footer [movie]="movie" [dynamicFooter]="dynamicFooter"></movie-card-footer>
+</section>

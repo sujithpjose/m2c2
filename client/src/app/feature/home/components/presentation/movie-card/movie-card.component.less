@@ -1,0 +1,62 @@
+@import './../../../../../../assets/less/_variables.less';
+
+@card_bg            : #233A50;
+@card_width         : 230px;
+@card_height        : 330px;
+@card_width_mobile  : 100px;
+@card_margin        : 5px 20px 5px 0;
+@card_margin_mobile : 5px 5px 5px 0;
+@card_footer_height : 85px;
+
+.mv-card {
+    float        : left;
+    width        : @card_width;
+    // height    :~'calc(@{card_height} + @{card_footer_height})';
+    margin       : @card_margin;
+    background   : @card_bg;
+}
+
+.poster-img {
+    width: @fill;
+}
+
+
+@media (min-width:320px) {
+
+    /* smartphones, iPhone, portrait 480x320 phones */
+    .mv-card {
+        width : @card_width_mobile;
+        margin: @card_margin_mobile
+    }
+
+}
+
+@media (min-width:481px) {
+
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+}
+
+
+@media (min-width:641px) {
+
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    .mv-card {
+        width: @card_width;
+    }
+
+}
+
+@media (min-width:961px) {
+
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+}
+
+@media (min-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}
+
+@media (min-width:1281px) {
+    /* hi-res laptops and desktops */
+}

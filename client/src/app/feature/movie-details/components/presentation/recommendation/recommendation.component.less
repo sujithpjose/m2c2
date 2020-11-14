@@ -1,0 +1,41 @@
+@import './../../../../../../assets/less/_variables.less';
+
+@height       : 170px;
+@border-radius: 9px;
+@spacing      : 20px;
+
+.recommendation-grid {
+    display : flex;
+    overflow: auto;
+}
+
+.recommendation-item {
+    margin-right: @spacing;
+}
+
+
+.img-backdrop {
+    height       : @height;
+    border-radius: @border-radius;
+}
+
+.text-grid {
+    display       : flex;
+    flex-direction: column;
+    align-items   : flex-start;
+    width         : @fill;
+    margin-top    : 10px;
+}
+
+.text-title {
+    color    : @primary_alternate_color;
+}
+
+.text-sub {
+    font-size: @font_smaller;
+}
+
+.sub-text {
+    font-size : @font_small;
+    margin-top: 10px;
+}

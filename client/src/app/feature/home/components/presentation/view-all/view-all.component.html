@@ -1,0 +1,7 @@
+<section class="mv-card">
+    <article (click)="onMovieSelect(movie)">
+        <img class="poster-img" alt="poster"
+            [src]="movie.backdrop_path ? 'https://image.tmdb.org/t/p/original'+ movie.backdrop_path : '/assets/images/slider_placeholder.svg'">
+    </article>
+    <movie-card-footer [movie]="movie"></movie-card-footer>
+</section>

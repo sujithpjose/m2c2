@@ -1,0 +1,49 @@
+@import './../../../../../../assets/less/_variables.less';
+@card_height        : 330px;
+@card_height_mobile : 150px;
+@card_width_mobile  : 100px;
+
+.poster-img {
+    width        : @fill;
+    height       : @card_height;
+    border-radius: 3px 3px 0 0;
+}
+
+@media (max-width:320px) {
+
+    /* smartphones, iPhone, portrait 480x320 phones */
+}
+
+@media (max-width:481px) {
+
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+
+
+@media (max-width:641px) {
+
+    .poster-img {
+        display      : block;
+        width        : @card_width_mobile;
+        height       : @card_height_mobile;
+        // width     : auto;
+        // height    : auto;
+    }
+
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    // .poster-img {
+    //     height: @card_height_mobile;
+    // }
+}
+
+@media (max-width:961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media (max-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}
+
+@media (max-width:1281px) {
+    /* hi-res laptops and desktops */
+}

@@ -1,0 +1,17 @@
+<m2c-search></m2c-search>
+
+
+<app-spacer></app-spacer>
+<h3 class="text-white">Search Results for ({{searchText}})</h3>
+<h5>{{movieResponse?.total_results}} movies found</h5>
+
+<section>
+    <article
+        *ngFor="let movie of movieResponse?.results | paginate: { itemsPerPage: 20, currentPage: p, totalItems: movieResponse?.total_results }">
+        <mv-view-all (movieSelected)=" onMovieSelected($event)" [movie]="movie">
+        </mv-view-all>
+    </article>
+</section>
+
+<pagination-controls *ngIf="movieResponse?.total_pages > 1" class="my-pagination" (pageChange)="pageChanged($event)">
+</pagination-controls>

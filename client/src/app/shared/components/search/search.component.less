@@ -1,0 +1,51 @@
+@import './../../../../assets/less/_variables.less';
+@height : 50px;
+@margin : 0px 0 40px 0;
+
+.search-grid {
+    display   : flex;
+    height    : @height;
+    margin    : @margin;
+    background: @theme_dark_color;
+    padding   : 3px;
+
+    input,
+    button {
+        background     : @theme_dark_bg ;
+        color          : @primary_color;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+    }
+
+    input {
+        border   : 0;
+        padding  : 5px 15px;
+        font-size: @font_large;
+        border-bottom: 1px solid #abb7c4;
+    }
+
+    button {
+        font-weight: bold;
+        font-size  : @font_smaller;
+    }
+
+    .input-fill.active {
+        color: @secondary_color ;
+    }
+
+}
+
+.input-grid {
+    flex-grow: .9;
+    margin   : 0 1px;
+}
+
+.btn-grid {
+    flex-grow: .1;
+}
+
+.fi {
+    font-size  : @font_larger;
+    margin-left: 5px;
+}

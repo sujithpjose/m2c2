@@ -1,0 +1,13 @@
+<h4 class="text-white">Cast</h4>
+<span class="line-border"></span>
+
+<section class="cast-section">
+    <article class="cast-info" *ngFor="let cast of data">
+        <img class="thumpnail"
+            [src]="cast.profile_path ? 'https://image.tmdb.org/t/p/original'+ cast.profile_path : '/assets/images/slider_placeholder.svg'">
+        <article class="cast-data">
+            <span class="text-title">{{cast.name}}</span>
+            <span class="sub-text">{{cast.character}}</span>
+        </article>
+    </article>
+</section>
